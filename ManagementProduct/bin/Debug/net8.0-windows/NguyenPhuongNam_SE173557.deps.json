@@ -1,0 +1,71 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "NguyenPhuongNam_SE173557/1.0.0": {
+        "dependencies": {
+          "Product_Repository": "1.0.0"
+        },
+        "runtime": {
+          "NguyenPhuongNam_SE173557.dll": {}
+        }
+      },
+      "Product_BusinessObject/1.0.0": {
+        "runtime": {
+          "Product_BusinessObject.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Product_DAO/1.0.0": {
+        "dependencies": {
+          "Product_BusinessObject": "1.0.0"
+        },
+        "runtime": {
+          "Product_DAO.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Product_Repository/1.0.0": {
+        "dependencies": {
+          "Product_DAO": "1.0.0"
+        },
+        "runtime": {
+          "Product_Repository.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NguyenPhuongNam_SE173557/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Product_BusinessObject/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Product_DAO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Product_Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

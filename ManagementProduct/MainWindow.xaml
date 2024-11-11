@@ -1,0 +1,265 @@
+﻿<Window x:Class="ManagementProduct.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ManagementProduct"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1200" Loaded="Window_Loaded">
+    <Window.Resources>
+        <LinearGradientBrush x:Key="HeaderGradient" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#8E2DE2" Offset="0"/>
+            <GradientStop Color="#4A00E0" Offset="1"/>
+        </LinearGradientBrush>
+
+        <Style x:Key="ModernButton" TargetType="Button">
+            <Setter Property="Height" Value="45"/>
+            <Setter Property="Width" Value="140"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="23" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Border CornerRadius="20" Background="#F0F2F5">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="Auto" MinHeight="334"/>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Header with Gradient -->
+            <Border Grid.Row="0" Background="{StaticResource HeaderGradient}" CornerRadius="20,20,0,0">
+                <Grid>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <Path Data="M12,3L2,12H5V20H19V12H22L12,3M12,7.7L16.3,12H15V18H9V12H7.7L12,7.7Z" 
+                              Fill="White" Width="30" Height="30" Margin="0,0,15,0"
+                              Stretch="Uniform"/>
+                        <TextBlock Text="Product Management System" 
+                                 FontSize="32" 
+                                 FontWeight="Bold" 
+                                 Foreground="White" Width="452"/>
+                    </StackPanel>
+                    <Button x:Name="btnLoad" Content="Load" HorizontalAlignment="Left" Margin="1033,30,0,0" VerticalAlignment="Top" Height="44" Width="73" Click="btnLoad_Click"/>
+                    <Button x:Name="btnFindFile" Content="Find File" HorizontalAlignment="Left" Margin="939,30,0,0" VerticalAlignment="Top" Height="44" Width="73" Click="btnFindFile_Click"/>
+                    <Button Content="..." Click="BrowseButton_Click" Margin="870,30,281,26" RenderTransformOrigin="-0.879,0.471"/>
+                    <TextBox x:Name="txtFile" HorizontalAlignment="Left" Margin="548,30,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="322" Height="44"/>
+                    <Button Content="✕" 
+                            HorizontalAlignment="Left" 
+                            VerticalAlignment="Center" 
+                            Margin="1141,0,0,0"
+                            Width="40" 
+                            Height="40"
+                            Background="#FF4081"
+                            Foreground="White"
+                            BorderThickness="0"
+                            Click="btnClose_Click">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border CornerRadius="20" Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Grid>
+            </Border>
+
+            <!-- Form Content in Cards -->
+            <WrapPanel Grid.Row="1" Margin="20,20,20,0">
+                <!-- Left Card -->
+                <Border Background="White" 
+                        CornerRadius="15" 
+                        Width="560"
+                        Margin="0,0,10,0" Height="314"
+                       >
+                    <StackPanel Margin="25">
+                        <TextBlock Text="Product Information" 
+                                 FontSize="24" 
+                                 FontWeight="Bold" 
+                                 Foreground="#333333"
+                                 Margin="0,0,0,5"/>
+
+                        <Label Content="Product ID" FontWeight="SemiBold" Foreground="#666666"/>
+                        <TextBox x:Name="txtProductId"
+                                 Height="40" 
+                                 Margin="0,5,0,15"
+                                 BorderThickness="0,0,0,2"
+                                 BorderBrush="#E0E0E0"
+                                 FontSize="14"
+                                 Padding="5,8"/>
+
+                        <Label Content="Product Name" FontWeight="SemiBold" Foreground="#666666"/>
+                        <TextBox x:Name="txtProductName"
+                                 Height="40" 
+                                 Margin="0,5,0,15"
+                                 BorderThickness="0,0,0,2"
+                                 BorderBrush="#E0E0E0"
+                                 FontSize="14"
+                                 Padding="5,8"/>
+
+                        <Label Content="Price" FontWeight="SemiBold" Foreground="#666666"/>
+                        <TextBox x:Name="txtPrice"
+                                 Height="40"
+                                 BorderThickness="0,0,0,2"
+                                 BorderBrush="#E0E0E0"
+                                 FontSize="14"
+                                 Padding="5,8"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Right Card -->
+                <Border Background="White" 
+                        CornerRadius="15" 
+                        Width="560"
+                        Margin="10,0,0,0" Height="305"
+                       >
+                    <StackPanel Margin="25,25,25,1">
+                        <TextBlock Text="Additional Details" 
+                                 FontSize="24" 
+                                 FontWeight="Bold" 
+                                 Foreground="#333333"
+                                 Margin="0,0,0,5"/>
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                        </Grid>
+
+
+                        <Label Content="Quantity" FontWeight="SemiBold" Foreground="#666666"/>
+                        <TextBox x:Name="txtQuantity"
+                                 Height="40" 
+                                 Margin="0,5,0,15"
+                                 BorderThickness="0,0,0,2"
+                                 BorderBrush="#E0E0E0"
+                                 FontSize="14"
+                                 Padding="5,8"/>
+                        <Label Content="Description" FontWeight="SemiBold" Foreground="#666666" Height="23"/>
+                        <TextBox x:Name="txtDescription"
+                                 Height="58"
+                                 BorderThickness="0,0,0,2"
+                                 BorderBrush="#E0E0E0"
+                                 FontSize="14"
+                                 TextWrapping="Wrap"
+                                 AcceptsReturn="True"
+                                 VerticalScrollBarVisibility="Auto"
+                                 Padding="5,8" Width="508"/>
+                    </StackPanel>
+                </Border>
+            </WrapPanel>
+
+            <!-- DataGrid -->
+            <Border Grid.Row="2" 
+                    Background="White" 
+                    CornerRadius="15" 
+                    Margin="20,20,20,70" Grid.RowSpan="2">
+                <DataGrid x:Name="dtgProducts"
+                          Margin="0,0,2,0"
+                          AutoGenerateColumns="False"
+                          IsReadOnly="True"
+                          BorderThickness="0"
+                          Background="Transparent"
+                          RowBackground="White"
+                          AlternatingRowBackground="#F8F9FA"
+                          GridLinesVisibility="None"
+                          VerticalScrollBarVisibility="Auto" SelectionChanged="dtgProducts_SelectionChanged">
+                    <DataGrid.Resources>
+                        <Style x:Key="HeaderStyle" TargetType="DataGridColumnHeader">
+                            <Setter Property="Background" Value="#4A00E0"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="Padding" Value="15,12"/>
+                            <Setter Property="FontWeight" Value="SemiBold"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        </Style>
+                    </DataGrid.Resources>
+
+                    <DataGrid.ColumnHeaderStyle>
+                        <StaticResource ResourceKey="HeaderStyle"/>
+                    </DataGrid.ColumnHeaderStyle>
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Product ID" Binding="{Binding ProductId}" Width="*">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+
+                        <DataGridTextColumn Header="Product Name" Binding="{Binding ProductName}" Width="*">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+
+                        <DataGridTextColumn Header="Price" Binding="{Binding Price}" Width="*">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+
+                        <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" Width="*">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+
+                        <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="*">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Border>
+
+            <!-- Action Buttons -->
+            <StackPanel Grid.Row="3" 
+                        Orientation="Horizontal" 
+                        HorizontalAlignment="Center" 
+                        Margin="0,40,0,0" Width="636">
+                <Button x:Name="btnAdd" Style="{StaticResource ModernButton}"
+                        Content="Add New"
+                        Background="#4CAF50"
+                        Click="btnAdd_Click" Foreground="Black"/>
+
+                <Button x:Name="btnUpdate" Style="{StaticResource ModernButton}"
+                        Content="Update"
+                        Background="#2196F3"
+                        Click="btnUpdate_Click" Foreground="Black"/>
+
+                <Button x:Name="btnDelete" Style="{StaticResource ModernButton}"
+                        Content="Delete"
+                        Background="#F44336"
+                        Click="btnDelete_Click" Foreground="Black"/>
+                <Button x:Name="btnClear" Style="{StaticResource ModernButton}"
+                        Content="Clear"
+                        Background="#F44336"
+                        Click="btnClear_Click" Foreground="Black"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

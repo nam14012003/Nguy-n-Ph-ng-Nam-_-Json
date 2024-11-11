@@ -1,0 +1,135 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0-windows7.0": {
+      "Product_BusinessObject/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Product_BusinessObject.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Product_BusinessObject.dll": {}
+        }
+      },
+      "Product_DAO/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Product_BusinessObject": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Product_DAO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Product_DAO.dll": {}
+        }
+      },
+      "Product_Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Product_DAO": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Product_Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Product_Repository.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Product_BusinessObject/1.0.0": {
+      "type": "project",
+      "path": "../Product_BusinessObject/Product_BusinessObject.csproj",
+      "msbuildProject": "../Product_BusinessObject/Product_BusinessObject.csproj"
+    },
+    "Product_DAO/1.0.0": {
+      "type": "project",
+      "path": "../Product_DAO/Product_DAO.csproj",
+      "msbuildProject": "../Product_DAO/Product_DAO.csproj"
+    },
+    "Product_Repository/1.0.0": {
+      "type": "project",
+      "path": "../Product_Repository/Product_Repository.csproj",
+      "msbuildProject": "../Product_Repository/Product_Repository.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0-windows7.0": [
+      "Product_Repository >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\namng\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\ManagementProduct\\ManagementProduct\\NguyenPhuongNam_SE173557.csproj",
+      "projectName": "NguyenPhuongNam_SE173557",
+      "projectPath": "D:\\ManagementProduct\\ManagementProduct\\NguyenPhuongNam_SE173557.csproj",
+      "packagesPath": "C:\\Users\\namng\\.nuget\\packages\\",
+      "outputPath": "D:\\ManagementProduct\\ManagementProduct\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\namng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\namng\\.nuget\\packages": {}
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "projectReferences": {
+            "D:\\ManagementProduct\\Product_Repository\\Product_Repository.csproj": {
+              "projectPath": "D:\\ManagementProduct\\Product_Repository\\Product_Repository.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0-windows7.0": {
+        "targetAlias": "net8.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+D:\ManagementProduct\Product_DAO\bin\Debug\net8.0\Product_DAO.deps.json
+D:\ManagementProduct\Product_DAO\bin\Debug\net8.0\Product_DAO.dll
+D:\ManagementProduct\Product_DAO\bin\Debug\net8.0\Product_DAO.pdb
+D:\ManagementProduct\Product_DAO\obj\Debug\net8.0\Product_DAO.GeneratedMSBuildEditorConfig.editorconfig
+D:\ManagementProduct\Product_DAO\obj\Debug\net8.0\Product_DAO.AssemblyInfoInputs.cache
+D:\ManagementProduct\Product_DAO\obj\Debug\net8.0\Product_DAO.AssemblyInfo.cs
+D:\ManagementProduct\Product_DAO\obj\Debug\net8.0\Product_DAO.csproj.CoreCompileInputs.cache
+D:\ManagementProduct\Product_DAO\obj\Debug\net8.0\Product_DAO.dll
+D:\ManagementProduct\Product_DAO\obj\Debug\net8.0\refint\Product_DAO.dll
+D:\ManagementProduct\Product_DAO\obj\Debug\net8.0\Product_DAO.pdb
+D:\ManagementProduct\Product_DAO\obj\Debug\net8.0\ref\Product_DAO.dll
+D:\ManagementProduct\Product_DAO\bin\Debug\net8.0\Product_BusinessObject.dll
+D:\ManagementProduct\Product_DAO\bin\Debug\net8.0\Product_BusinessObject.pdb
+D:\ManagementProduct\Product_DAO\obj\Debug\net8.0\Product_DAO.csproj.AssemblyReference.cache
+D:\ManagementProduct\Product_DAO\obj\Debug\net8.0\Product_.19E04C3E.Up2Date

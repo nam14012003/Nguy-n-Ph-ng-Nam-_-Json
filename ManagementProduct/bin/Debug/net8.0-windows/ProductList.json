@@ -1,0 +1,30 @@
+[
+  {
+    "ProductId": 1,
+    "ProductName": "coca",
+    "Price": 1000.000,
+    "Quantity": 10,
+    "Description": "coca"
+  },
+  {
+    "ProductId": 2,
+    "ProductName": "pepsi",
+    "Price": 100.000,
+    "Quantity": 20,
+    "Description": "pepsi"
+  },
+  {
+    "ProductId": 3,
+    "ProductName": "sting",
+    "Price": 15.000,
+    "Quantity": 10,
+    "Description": "sting dau"
+  },
+  {
+    "ProductId": 4,
+    "ProductName": "stingggggggg",
+    "Price": 15.0000,
+    "Quantity": 10,
+    "Description": "sting dau"
+  }
+]

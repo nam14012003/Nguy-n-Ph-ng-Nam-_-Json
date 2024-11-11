@@ -1,0 +1,96 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "Product_BusinessObject/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Product_BusinessObject.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Product_BusinessObject.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Product_BusinessObject/1.0.0": {
+      "type": "project",
+      "path": "../Product_BusinessObject/Product_BusinessObject.csproj",
+      "msbuildProject": "../Product_BusinessObject/Product_BusinessObject.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "Product_BusinessObject >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\namng\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\ManagementProduct\\Product_DAO\\Product_DAO.csproj",
+      "projectName": "Product_DAO",
+      "projectPath": "D:\\ManagementProduct\\Product_DAO\\Product_DAO.csproj",
+      "packagesPath": "C:\\Users\\namng\\.nuget\\packages\\",
+      "outputPath": "D:\\ManagementProduct\\Product_DAO\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\namng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\namng\\.nuget\\packages": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "D:\\ManagementProduct\\Product_BusinessObject\\Product_BusinessObject.csproj": {
+              "projectPath": "D:\\ManagementProduct\\Product_BusinessObject\\Product_BusinessObject.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
